@@ -1,11 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Item = () => {
+const Item = ({url}) => {
     return (
         <div className="Item">
-            a 
+            <img src={url}/>
         </div>
     )
+}
+
+Item.PropTypes = {
+    url: PropTypes.string.isRequired
 }
 
 export default Item
