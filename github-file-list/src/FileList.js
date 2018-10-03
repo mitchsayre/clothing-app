@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import Time from './Time'
 
 const FileList = ({ files }) => {
     return (
@@ -22,6 +23,9 @@ const FileListItem = ({ file }) => {
         <tr className="file-list-item">
             {getFileName(file)}
             <CommitMessage commit={file.latestCommit} />
+            <td className="age">
+                <Time time={file.updated_at}/>    
+            </td>
         </tr>
     )
 }
