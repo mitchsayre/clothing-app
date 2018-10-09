@@ -3,9 +3,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+ button {
+ font-size: 4px;
+ width: 4px;
+ }
 
 .block {
-  margin: 20px;
+  margin: 4px;
+  width: 5px;
+  font-size: 4px;
 }
 
 .App-logo {

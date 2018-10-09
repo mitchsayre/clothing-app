@@ -1,115 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './App.css'
 import CountingParent from './CountingParent'
+import ControlledInput from './ControlledInput'
 
-class App extends Component {
+class Page extends React.Component {
   render() {
     return (
       <div className="App">
         <CountingParent />
-        <CountingParent />
-        <CountingParent />
-        <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent /><CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent /><CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent /> <CountingParent />
-        <CountingParent />
-        <CountingParent />
+        <ControlledInput />
       </div>
     )
   }
 }
 
-export default App;
+export default Page
