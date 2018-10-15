@@ -45,7 +45,7 @@ body {
   height: 100px;
 }
 
-.Row {
+.row {
   width: 500px;
   display: flex;
   flex-wrap: wrap;

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Item = ({url}) => {
+const Item = ({url, clickHandler}) => {
     return (
-        <div className="Item">
+        <div className="Item" onClick={clickHandler}>
             <img src={url}/>
         </div>
     )
