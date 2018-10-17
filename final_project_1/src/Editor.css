@@ -1,0 +1,34 @@
+.editorContainer {
+    width: 100%;
+    height: 70vh;
+    background-image: url('./body.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Item {
+    width: 30%;
+    margin: auto;
+    opacity: .5;
+      background-color: black; 
+  }
+  
+  .head {
+    height: 21%;
+  }
+
+  .torso {
+    height: 27%;
+  }
+
+  .legs {
+      height: 36%;
+  }
+
+  .feet {
+      height: 16%;
+  }
+
+  .Item:hover {
+      background-color: grey;
+  }

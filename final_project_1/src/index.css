@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App {
+  width: 100vw;
+}
+
+.Main {
+  width: 680px;
+  margin: auto;
+  background-color: red;
+}
+
+.ControlBar {
+  width: 100%;
+  height: 15vh;
+  background-color: blue;
+}
+
+.Editor {
+  width: 100%;
+  height: 70vh;
+  background-color: black;
+}
+
+.Search {
+  width: 100%;
+  height: 15vh;
+  background-color: pink;
+}
+
+
