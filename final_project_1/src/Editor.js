@@ -1,22 +1,22 @@
 import React from 'react'
 import './Editor.css'
 
-const Item = ({ type }) => {
-    return (
-        <div className={`Item ${type}`}>
-
-        </div>
-    )
-}
-
-const Editor = () => {
+const Editor = (outfit) => {
     return (
         <div className="Editor">
             <div className="editorContainer">
-                <Item type="head" />
-                <Item type="torso" />
-                <Item type="legs" />
-                <Item type="feet" />
+                <div className="item head">
+                    <img src={outfit.outfit.head.url} alt={outfit.outfit.head.name} />
+                </div>
+                <div className="item torso">
+                    <img src={outfit.outfit.torso.url} alt={outfit.outfit.torso.name} />
+                </div>
+                <div className="item legs">
+                    <img src={outfit.outfit.legs.url} alt={outfit.outfit.legs.name} />
+                </div>
+                <div className="item feet">
+                    <img src={outfit.outfit.feet.url} alt={outfit.outfit.feet.name} />
+                </div>
             </div>
         </div>
     )

@@ -9,10 +9,26 @@ class Main extends Component {
         super(props)
         this.state = {
             currentOutfit: {
-                head: null,
-                torso: null,
-                legs: null,
-                feet: null,
+                head: {
+                    name: 'hatName',
+                    type: 'head',
+                    url: 'hat.png',
+                },
+                torso: {
+                    name: 'shirtName',
+                    type: 'torso',
+                    url: 'shirt.png',
+                },
+                legs: {
+                    name: 'PantsName',
+                    type: 'legs',
+                    url: 'pants.png',
+                },
+                feet: {
+                    name: 'shoesName',
+                    type: 'feet',
+                    url: 'shoes.png',
+                },
             },
 
             clothingLibrary: {
@@ -238,9 +254,9 @@ class Main extends Component {
         return (
             <div className="Main">
                 <ControlBar />
-                <Editor />
+                <Editor outfit={this.state.currentOutfit}/>
                 <Search
-                    hats={this.hatsDatabase}
+                    hats={this.hatsDatabase} 
                     shirts={this.shirtsDatabase}
                     pants={this.pantsDatabase}
                     shoes={this.shoesDatabase}

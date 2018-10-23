@@ -9,25 +9,19 @@ const Search = (props) => {
     return (
         <div className="Search">
             <div className="clothesContainer">
-                {props.hats.map((item) => <div className="item">{item.name}</div>)}
+                {props.hats.map((item) => <div className="clothingItem">{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.shirts.map((item) => <div className="item">{item.name}</div>)}
+                {props.shirts.map((item) => <div className="clothingItem">{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.pants.map((item) => <div className="item">{item.name}</div>)}
+                {props.pants.map((item) => <div className="clothingItem">{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.shoes.map((item) => <div className="item">{item.name}</div>)}
+                {props.shoes.map((item) => <div className="clothingItem">{item.name}</div>)}
             </div>
         </div>
     )
 }
-
-// {data.this.shirts.map((number) =>
-//     <p key={number.name}>
-//         value={number.name} </p>
-
-// )}
 
 export default Search
