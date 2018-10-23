@@ -1,0 +1,16 @@
+.Search {
+    width: 100%;
+    height: 15vh;
+    background-color: pink;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  
+  .clothesContainer {
+    width: 170px;
+    overflow-y: auto;
+  }
+  
+  .item {
+    width: 170px;
+  }

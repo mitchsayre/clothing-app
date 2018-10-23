@@ -1,4 +1,5 @@
 import React from 'react'
+import './Search.css'
 
 const Search = (props) => {
     console.log(props.hats)
@@ -7,17 +8,17 @@ const Search = (props) => {
     console.log(props.shoes)
     return (
         <div className="Search">
-            <div className="hats">
-                {props.hats.map((item) => item.name)}
+            <div className="clothesContainer">
+                {props.hats.map((item) => <div className="item">{item.name}</div>)}
             </div>
-            <div className="shirts">
-                {props.shirts.map((item) => item.name)}
+            <div className="clothesContainer">
+                {props.shirts.map((item) => <div className="item">{item.name}</div>)}
             </div>
-            <div className="pants">
-                {props.shirts.map((item) => item.name)}
+            <div className="clothesContainer">
+                {props.pants.map((item) => <div className="item">{item.name}</div>)}
             </div>
-            <div className="shoes">
-                {props.shoes.map((item) => item.name)}
+            <div className="clothesContainer">
+                {props.shoes.map((item) => <div className="item">{item.name}</div>)}
             </div>
         </div>
     )

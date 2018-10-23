@@ -48,9 +48,89 @@ class Main extends Component {
                 type: 'head',
                 url: 'hat.png',
             },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
+            {
+                name: 'hatName',
+                type: 'head',
+                url: 'hat.png',
+            },
         ]
 
         this.shirtsDatabase = [
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
+            {
+                name: 'shirtName',
+                type: 'torso',
+                url: 'shirt.png',
+            },
             {
                 name: 'shirtName',
                 type: 'torso',
@@ -64,9 +144,84 @@ class Main extends Component {
                 type: 'legs',
                 url: 'pants.png',
             },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
+            {
+                name: 'PantsName',
+                type: 'legs',
+                url: 'pants.png',
+            },
         ]
 
         this.shoesDatabase = [
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName',
+                type: 'feet',
+                url: 'shoes.png',
+            },
             {
                 name: 'shoesName',
                 type: 'feet',
