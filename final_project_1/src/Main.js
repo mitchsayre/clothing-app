@@ -60,47 +60,47 @@ class Main extends Component {
         }
         this.hatsDatabase = [
             {
-                name: 'hatName',
+                name: 'hatName1',
+                type: 'head',
+                url: 'https://images.uline.com/is/image//content/dam/images/S/S21500/S-21475BL.jpg?$MediumRHD$&iccEmbed=1&icc=AdobeRGB',
+            },
+            {
+                name: 'hatName2',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName3',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName4',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName5',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName6',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName7',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
+                name: 'hatName8',
                 type: 'head',
                 url: 'hat.png',
             },
             {
-                name: 'hatName',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName',
+                name: 'hatName9',
                 type: 'head',
                 url: 'hat.png',
             },
@@ -108,47 +108,47 @@ class Main extends Component {
 
         this.shirtsDatabase = [
             {
-                name: 'shirtName',
+                name: 'shirtName1',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName2',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName3',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName4',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName5',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName6',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName7',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName8',
                 type: 'torso',
                 url: 'shirt.png',
             },
             {
-                name: 'shirtName',
+                name: 'shirtName9',
                 type: 'torso',
                 url: 'shirt.png',
             },
@@ -156,47 +156,47 @@ class Main extends Component {
 
         this.pantsDatabase = [
             {
-                name: 'PantsName',
+                name: 'PantsName1',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName2',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName3',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName4',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName5',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName6',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName7',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName8',
                 type: 'legs',
                 url: 'pants.png',
             },
             {
-                name: 'PantsName',
+                name: 'PantsName9',
                 type: 'legs',
                 url: 'pants.png',
             },
@@ -204,42 +204,47 @@ class Main extends Component {
 
         this.shoesDatabase = [
             {
-                name: 'shoesName',
+                name: 'shoesName1',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName2',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName3',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName4',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName5',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName6',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName7',
                 type: 'feet',
                 url: 'shoes.png',
             },
             {
-                name: 'shoesName',
+                name: 'shoesName8',
+                type: 'feet',
+                url: 'shoes.png',
+            },
+            {
+                name: 'shoesName9',
                 type: 'feet',
                 url: 'shoes.png',
             },
@@ -247,19 +252,36 @@ class Main extends Component {
 
     }
 
-    componentDidMount() {
+    clickHandler(itemObject) {
+        console.log(itemObject)
+        const tempStoredOutfit = this.state.currentOutfit
+        if (itemObject.type === "head") {
+            tempStoredOutfit.head = itemObject
+        }
+        else if (itemObject.type === "torso") {
+            tempStoredOutfit.torso = itemObject
+        }
+        else if (itemObject.type === "legs") {
+            tempStoredOutfit.legs = itemObject
+        }
+        else if (itemObject.type === "feet") {
+            tempStoredOutfit.feet = itemObject
+        }
 
+        this.setState({ currentOutfit: tempStoredOutfit })
     }
+
     render() {
         return (
             <div className="Main">
                 <ControlBar />
-                <Editor outfit={this.state.currentOutfit}/>
+                <Editor outfit={this.state.currentOutfit} />
                 <Search
-                    hats={this.hatsDatabase} 
+                    hats={this.hatsDatabase}
                     shirts={this.shirtsDatabase}
                     pants={this.pantsDatabase}
                     shoes={this.shoesDatabase}
+                    callBack={this.clickHandler.bind(this)}
                 />
             </div>
         )
