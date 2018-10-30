@@ -5,16 +5,16 @@ const Search = (props) => {
     return (
         <div className="Search">
             <div className="clothesContainer">
-                {props.hats.map((item) => <div className="clothingItem" onClick={props.callBack.bind(null, item)}>{item.name}</div>)}
+                {props.hats.map((item) => <div key={item.id} className="clothingItem" onClick={() => props.updateCurrentOutfit(item)}>{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.shirts.map((item) => <div className="clothingItem" onClick={props.callBack.bind(null, item)}>{item.name}</div>)}
+                {props.shirts.map((item) => <div key={item.id} className="clothingItem" onClick={() => props.updateCurrentOutfit(item)}>{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.pants.map((item) => <div className="clothingItem" onClick={props.callBack.bind(null, item)}>{item.name}</div>)}
+                {props.pants.map((item) => <div key={item.id} className="clothingItem" onClick={()=> props.updateCurrentOutfit(item)}>{item.name}</div>)}
             </div>
             <div className="clothesContainer">
-                {props.shoes.map((item) => <div className="clothingItem" onClick={props.callBack.bind(null, item)}>{item.name}</div>)}
+                {props.shoes.map((item) => <div key={item.id} className="clothingItem" onClick={()=> props.updateCurrentOutfit(item)}>{item.name}</div>)}
             </div>
         </div>
     )

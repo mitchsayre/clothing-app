@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ControlBar from './ControlBar'
 import Editor from './Editor'
 import Search from './Search'
+import { hatsDatabase, shirtsDatabase, pantsDatabase, shoesDatabase } from './sampleClothingData'
 
 class Main extends Component {
 
@@ -9,279 +10,106 @@ class Main extends Component {
         super(props)
         this.state = {
             currentOutfit: {
-                head: {
-                    name: 'hatName',
-                    type: 'head',
-                    url: 'hat.png',
-                },
-                torso: {
-                    name: 'shirtName',
-                    type: 'torso',
-                    url: 'shirt.png',
-                },
-                legs: {
-                    name: 'PantsName',
-                    type: 'legs',
-                    url: 'pants.png',
-                },
-                feet: {
-                    name: 'shoesName',
-                    type: 'feet',
-                    url: 'shoes.png',
-                },
+                id: null,
+                head: {},
+                torso: {},
+                legs: {},
+                feet: {},
             },
 
-            clothingLibrary: {
-                outfit1: {
-                    head: null,
-                    torso: null,
-                    legs: null,
-                    feet: null,
-                },
-                outfit2: {
-                    head: null,
-                    torso: null,
-                    legs: null,
-                    feet: null,
-                },
-                outfit3: {
-                    head: null,
-                    torso: null,
-                    legs: null,
-                    feet: null,
-                },
-                outfit4: {
-                    head: null,
-                    torso: null,
-                    legs: null,
-                    feet: null,
-                },
-            },
+            clothingLibrary: [
+
+            ],
+            outfitKey: 0,
         }
-        this.hatsDatabase = [
-            {
-                name: 'hatName1',
-                type: 'head',
-                url: 'https://images.uline.com/is/image//content/dam/images/S/S21500/S-21475BL.jpg?$MediumRHD$&iccEmbed=1&icc=AdobeRGB',
-            },
-            {
-                name: 'hatName2',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName3',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName4',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName5',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName6',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName7',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName8',
-                type: 'head',
-                url: 'hat.png',
-            },
-            {
-                name: 'hatName9',
-                type: 'head',
-                url: 'hat.png',
-            },
-        ]
-
-        this.shirtsDatabase = [
-            {
-                name: 'shirtName1',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName2',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName3',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName4',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName5',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName6',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName7',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName8',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-            {
-                name: 'shirtName9',
-                type: 'torso',
-                url: 'shirt.png',
-            },
-        ]
-
-        this.pantsDatabase = [
-            {
-                name: 'PantsName1',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName2',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName3',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName4',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName5',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName6',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName7',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName8',
-                type: 'legs',
-                url: 'pants.png',
-            },
-            {
-                name: 'PantsName9',
-                type: 'legs',
-                url: 'pants.png',
-            },
-        ]
-
-        this.shoesDatabase = [
-            {
-                name: 'shoesName1',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName2',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName3',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName4',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName5',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName6',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName7',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName8',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-            {
-                name: 'shoesName9',
-                type: 'feet',
-                url: 'shoes.png',
-            },
-        ]
-
+        this.hatsDatabase = hatsDatabase
+        this.shirtsDatabase = shirtsDatabase
+        this.pantsDatabase = pantsDatabase
+        this.shoesDatabase = shoesDatabase
     }
 
-    clickHandler(itemObject) {
-        console.log(itemObject)
+    clothingTypeClicked = (itemObject) => {
         const tempStoredOutfit = this.state.currentOutfit
-        if (itemObject.type === "head") {
-            tempStoredOutfit.head = itemObject
-        }
-        else if (itemObject.type === "torso") {
-            tempStoredOutfit.torso = itemObject
-        }
-        else if (itemObject.type === "legs") {
-            tempStoredOutfit.legs = itemObject
-        }
-        else if (itemObject.type === "feet") {
-            tempStoredOutfit.feet = itemObject
+        switch (itemObject.type) {
+            case "head":
+                tempStoredOutfit.head = itemObject
+                break;
+            case "torso":
+                tempStoredOutfit.torso = itemObject
+                break;
+            case "legs":
+                tempStoredOutfit.legs = itemObject
+                break;
+            case "feet":
+                tempStoredOutfit.feet = itemObject
+                break;
+
+            default:
+                alert("undefined clothing")
         }
 
         this.setState({ currentOutfit: tempStoredOutfit })
     }
 
+    outfitClear = () => {
+        const clearOutfit = {
+            head: {
+                id: '',
+                name: '',
+                type: '',
+                url: '',
+            },
+            torso: {
+                id: '',
+                name: '',
+                type: '',
+                url: '',
+            },
+            legs: {
+                id: '',
+                name: '',
+                type: '',
+                url: '',
+            },
+            feet: {
+                id: '',
+                name: '',
+                type: '',
+                url: '',
+            },
+        }
+        this.setState({ currentOutfit: clearOutfit })
+    }
+    outfitSave = () => {
+        const currentOutfit = this.state.currentOutfit
+        const outfitLibrary = this.state.clothingLibrary
+        currentOutfit.id = this.state.outfitKey++
+        this.setState({ outfitKey: currentOutfit.id})
+        this.setState({ currentOutfit: currentOutfit  })
+        outfitLibrary.push(currentOutfit)
+        this.setState({ clothingLibrary: outfitLibrary })
+        console.log(this.state.currentOutfit)
+        this.outfitClear()
+        console.log(this.state.clothingLibrary)
+        
+    }
+
     render() {
         return (
             <div className="Main">
-                <ControlBar />
-                <Editor outfit={this.state.currentOutfit} />
+                <ControlBar
+                    clearOutfit={() => this.outfitClear()}
+                    saveOutfit={() => this.outfitSave()}
+                    outfitLibrary={this.state.clothingLibrary}
+                />
+
+                <Editor outfit={this.state.currentOutfit} type="large" key={Date()} />
                 <Search
                     hats={this.hatsDatabase}
                     shirts={this.shirtsDatabase}
                     pants={this.pantsDatabase}
                     shoes={this.shoesDatabase}
-                    callBack={this.clickHandler.bind(this)}
+                    updateCurrentOutfit={this.clothingTypeClicked}
                 />
             </div>
         )
