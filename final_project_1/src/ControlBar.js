@@ -1,7 +1,7 @@
 import React from 'react'
 import Editor from './Editor'
 
-const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary }) => {
+const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary, setOutfitFromLibrary, removeThing }) => {
     return (
         <div className="ControlBar">
             ControlBar
@@ -9,9 +9,8 @@ const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary }) => {
             <button onClick={() => saveOutfit()}>saveOutfit</button>
             <div className="library">
                 library
-                {console.log(outfitLibrary)}
                 {outfitLibrary.map(libraryItem => (
-                    <Editor key={libraryItem.id} outfit={libraryItem} type="mini" />
+                    <Editor key={libraryItem.id} outfit={libraryItem} type="mini" removeThing={removeThing} setOutfitFromLibrary={setOutfitFromLibrary}/>
                 ))
                 }
             </div>

@@ -22,10 +22,6 @@ class Main extends Component {
             ],
             outfitKey: 0,
         }
-        this.hatsDatabase = hatsDatabase
-        this.shirtsDatabase = shirtsDatabase
-        this.pantsDatabase = pantsDatabase
-        this.shoesDatabase = shoesDatabase
     }
 
     clothingTypeClicked = (itemObject) => {
@@ -83,15 +79,44 @@ class Main extends Component {
     outfitSave = () => {
         const currentOutfit = this.state.currentOutfit
         const outfitLibrary = this.state.clothingLibrary
-        currentOutfit.id = this.state.outfitKey++
-        this.setState({ outfitKey: currentOutfit.id})
-        this.setState({ currentOutfit: currentOutfit  })
+
+        currentOutfit.id = this.getNewKey()
+
+
+        this.setState({ currentOutfit: currentOutfit })
+
+
         outfitLibrary.push(currentOutfit)
         this.setState({ clothingLibrary: outfitLibrary })
-        console.log(this.state.currentOutfit)
+
         this.outfitClear()
-        console.log(this.state.clothingLibrary)
-        
+
+    }
+
+    getNewKey = () => {
+        const newId =this.state.outfitKey + 1
+        this.setState({ outfitKey: newId }) 
+    }
+
+    setOutfitFromLibrary = (outfit) => {
+        const selectedOutfit = outfit
+        selectedOutfit.id = this.getNewKey()
+        this.setState({ currentOutfit: selectedOutfit })
+    }
+
+    removeThing = (thingBeingRemoved) => {
+        const emptyInfo = {
+            id: '',
+            name: '',
+            type: '',
+            url: '',
+    }
+    const storedOutfit = this.state.currentOutfit
+
+    storedOutfit[thingBeingRemoved] = emptyInfo
+
+        this.setState({ currentOutfit: storedOutfit })
+        console.log(thingBeingRemoved)
     }
 
     render() {
@@ -101,14 +126,22 @@ class Main extends Component {
                     clearOutfit={() => this.outfitClear()}
                     saveOutfit={() => this.outfitSave()}
                     outfitLibrary={this.state.clothingLibrary}
+                    setOutfitFromLibrary={this.setOutfitFromLibrary}
+                    removeThing={this.removeThing}
                 />
 
-                <Editor outfit={this.state.currentOutfit} type="large" key={Date()} />
+                <Editor 
+                    outfit={this.state.currentOutfit} 
+                    type="large"   
+                    key={()=> this.getNewKey()} 
+                    setOutfitFromLibrary={null}
+                    removeThing={this.removeThing}
+                />
                 <Search
-                    hats={this.hatsDatabase}
-                    shirts={this.shirtsDatabase}
-                    pants={this.pantsDatabase}
-                    shoes={this.shoesDatabase}
+                    hats={hatsDatabase}
+                    shirts={shirtsDatabase}
+                    pants={pantsDatabase}
+                    shoes={shoesDatabase}
                     updateCurrentOutfit={this.clothingTypeClicked}
                 />
             </div>
