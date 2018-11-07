@@ -1,7 +1,7 @@
 import React from 'react'
 import Editor from './Editor'
 
-const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary, setOutfitFromLibrary, removeThing }) => {
+const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary, setOutfitFromLibrary, removeThing, removeOutfit }) => {
     return (
         <div className="ControlBar">
             ControlBar
@@ -10,7 +10,7 @@ const ControlBar = ({ clearOutfit, saveOutfit, outfitLibrary, setOutfitFromLibra
             <div className="library">
                 library
                 {outfitLibrary.map(libraryItem => (
-                    <Editor key={libraryItem.id} outfit={libraryItem} type="mini" removeThing={removeThing} setOutfitFromLibrary={setOutfitFromLibrary}/>
+                    <Editor key={libraryItem.id} outfit={libraryItem} type="mini" removeThing={removeThing} removeOutfit={removeOutfit} setOutfitFromLibrary={setOutfitFromLibrary}/>
                 ))
                 }
             </div>

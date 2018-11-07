@@ -11,10 +11,30 @@ class Main extends Component {
         this.state = {
             currentOutfit: {
                 id: null,
-                head: {},
-                torso: {},
-                legs: {},
-                feet: {},
+                head: {
+                    id: '',
+                    name: '',
+                    type: '',
+                    url: '',
+                },
+                torso: {
+                    id: '',
+                    name: '',
+                    type: '',
+                    url: '',
+                },
+                legs: {
+                    id: '',
+                    name: '',
+                    type: '',
+                    url: '',
+                },
+                feet: {
+                    id: '',
+                    name: '',
+                    type: '',
+                    url: '',
+                },
             },
 
             clothingLibrary: [
@@ -80,22 +100,32 @@ class Main extends Component {
         const currentOutfit = this.state.currentOutfit
         const outfitLibrary = this.state.clothingLibrary
 
-        currentOutfit.id = this.getNewKey()
+        console.log("cid=" + currentOutfit.id)
+        if (currentOutfit.id === null || currentOutfit.id === undefined) {
+            currentOutfit.id = this.getNewKey()
 
 
-        this.setState({ currentOutfit: currentOutfit })
+            this.setState({ currentOutfit: currentOutfit })
 
 
-        outfitLibrary.push(currentOutfit)
+            outfitLibrary.push(currentOutfit)
+
+
+        } else {
+            outfitLibrary.forEach(function (outfit) {
+                if (outfit.id === currentOutfit.id) {
+                    outfit = currentOutfit
+                }
+            })
+        }
         this.setState({ clothingLibrary: outfitLibrary })
-
         this.outfitClear()
-
     }
 
     getNewKey = () => {
-        const newId =this.state.outfitKey + 1
-        this.setState({ outfitKey: newId }) 
+        const newId = this.state.outfitKey + 1
+        this.setState({ outfitKey: newId })
+        return (newId)
     }
 
     setOutfitFromLibrary = (outfit) => {
@@ -110,13 +140,19 @@ class Main extends Component {
             name: '',
             type: '',
             url: '',
-    }
-    const storedOutfit = this.state.currentOutfit
+        }
+        const storedOutfit = this.state.currentOutfit
 
-    storedOutfit[thingBeingRemoved] = emptyInfo
+        storedOutfit[thingBeingRemoved] = emptyInfo
 
         this.setState({ currentOutfit: storedOutfit })
         console.log(thingBeingRemoved)
+    }
+
+    removeOutfit = (OutfitBeingRemoved) => {
+        const clothingLibrary = this.state.clothingLibrary
+        const newLibrary = clothingLibrary.filter(item => item !== OutfitBeingRemoved)
+        this.setState({ clothingLibrary: newLibrary })
     }
 
     render() {
@@ -128,12 +164,13 @@ class Main extends Component {
                     outfitLibrary={this.state.clothingLibrary}
                     setOutfitFromLibrary={this.setOutfitFromLibrary}
                     removeThing={this.removeThing}
+                    removeOutfit={this.removeOutfit}
                 />
 
-                <Editor 
-                    outfit={this.state.currentOutfit} 
-                    type="large"   
-                    key={()=> this.getNewKey()} 
+                <Editor
+                    outfit={this.state.currentOutfit}
+                    type="large"
+                    key={() => this.getNewKey()}
                     setOutfitFromLibrary={null}
                     removeThing={this.removeThing}
                 />
