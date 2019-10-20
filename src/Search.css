@@ -2,7 +2,7 @@
     width: 100%;
     height: 15vh;
     background-color: pink;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     display: flex;
   }
   
